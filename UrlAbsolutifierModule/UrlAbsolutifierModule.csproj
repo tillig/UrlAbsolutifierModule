@@ -1,0 +1,61 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BFB5EA42-8DE7-43D4-B88A-FC47F4C023DF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Paraesthesia.Web</RootNamespace>
+    <AssemblyName>Paraesthesia.Web.UrlAbsolutifierModule</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin/Paraesthesia.Web.UrlAbsolutifierModule.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin/Paraesthesia.Web.UrlAbsolutifierModule.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\RegexConverter.cs" />
+    <Compile Include="Configuration\UrlAbsolutifier\HandlerTypeRule.cs" />
+    <Compile Include="Configuration\UrlAbsolutifier\Rule.cs" />
+    <Compile Include="Configuration\UrlAbsolutifier\RuleConfigurationCollection.cs" />
+    <Compile Include="Configuration\UrlAbsolutifier\RuleConfigurationElement.cs" />
+    <Compile Include="Configuration\UrlAbsolutifier\RuleConfigurationElementComparer.cs" />
+    <Compile Include="Configuration\UrlAbsolutifier\RuleProcess.cs" />
+    <Compile Include="Configuration\UrlAbsolutifier\UrlRegexRule.cs" />
+    <Compile Include="UrlAbsolutifierFilter.cs" />
+    <Compile Include="UrlAbsolutifierModule.cs" />
+    <Compile Include="Configuration\UrlAbsolutifier\UrlAbsolutifierSection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
